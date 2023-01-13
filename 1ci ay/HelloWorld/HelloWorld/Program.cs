@@ -10,9 +10,19 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Sexsi melumatlar");
             Console.Write("Adinizi daxil edin: ");
             Console.ReadLine();
+            Console.Write("Soyadinizi daxil edin: ");
+            Console.ReadLine();
+            Console.Write("Yasinizi daxil edin: ");
+            Console.ReadLine();
+            Console.Write("Dogum yerinizi daxil edin: ");
+            Console.ReadLine();
+            
+
+
+
         }
     }
 }
