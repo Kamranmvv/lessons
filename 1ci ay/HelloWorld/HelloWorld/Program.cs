@@ -10,16 +10,23 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            //task1
             Console.WriteLine("Sexsi melumatlar");
             Console.Write("Adinizi daxil edin: ");
-            Console.ReadLine();
+            var ad = Console.ReadLine();
             Console.Write("Soyadinizi daxil edin: ");
-            Console.ReadLine();
+            var soyad = Console.ReadLine();
             Console.Write("Yasinizi daxil edin: ");
-            Console.ReadLine();
+            var yas = Console.ReadLine();
             Console.Write("Dogum yerinizi daxil edin: ");
+            var dogumyeri = Console.ReadLine();
+            Console.WriteLine("Ad: " + ad + "\n" + "Soyad: " + soyad + "\n" + "Yas: " + yas + "\n" + "DogumYeri: " + dogumyeri);
             Console.ReadLine();
-            
+
+
+            //task2
+
+
 
 
 
