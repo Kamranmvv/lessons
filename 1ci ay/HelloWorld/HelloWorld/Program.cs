@@ -11,7 +11,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //task1
-            Console.WriteLine("Hello World!")
+            Console.WriteLine("Hello World!");
             Console.WriteLine("Sexsi melumatlar");
             Console.Write("Adinizi daxil edin: ");
             var ad = Console.ReadLine();
