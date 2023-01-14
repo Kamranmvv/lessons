@@ -35,18 +35,18 @@ namespace HelloWorld
             //Console.ReadLine();
 
             //task 2.2
-            //var red = "qirmizi";
-            //var car = "avtomobil";
-            //var expensive = "bahali";
-            //var phone = "telefon";
-            //var bosluq = " ";
-            //Console.Write(red);
-            //Console.Write(bosluq);
-            //Console.WriteLine(car);
-            //Console.Write(expensive);
-            //Console.Write(bosluq);
-            //Console.WriteLine(phone);
-            //Console.ReadLine();
+            string red = "qirmizi";
+            var car = "avtomobil";
+            var expensive = "bahali";
+            var phone = "telefon";
+            var bosluq = " ";
+            Console.Write(red);
+            Console.Write(bosluq);
+            Console.WriteLine(car);
+            Console.Write(expensive);
+            Console.Write(bosluq);
+            Console.WriteLine(phone);
+            Console.ReadLine();
 
             //task2.3
             //var red = "qirmizi ";
@@ -66,5 +66,7 @@ namespace HelloWorld
 
 
         }
+
+        
     }
 }
