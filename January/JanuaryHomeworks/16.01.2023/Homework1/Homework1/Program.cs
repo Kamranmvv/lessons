@@ -9,7 +9,7 @@ namespace Homework1
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             /* Homework 1:
                Ev tapşırığı olaraq ilk növbədə ən az 2 - 3 saat internetdə "C# data types"(C# veri tipleri) mövzusunu geniş bir şəkildə araşdırırsınız.
                Araşdıra - araşdıra da bir Console App açıb araşdırdığınız data tiplərindən nümunələr yazırsınız.Hər data type üçün ən az 5 fərqli nümunə yazın.
@@ -26,6 +26,23 @@ namespace Homework1
 
 
                  Qeyd: mövzuları araşdırarkən bir saytdan və ya qaynaqdan araşdırmayın.Fərqli - fərqli qaynaqlara baxın.*/
+            int number = 5;
+            double doubleNumber = 4.937128941984714747195738125789157785175715775d;
+            bool t = true;
+
+
+            Console.WriteLine(doubleNumber);
+
+
+
+
+
+
+
+
+
+            Console.ReadLine();
+
         }
     }
 }
