@@ -18,7 +18,7 @@ namespace Homework3
              */
             string name1 = "Kamran";
             string name2 = "Orxan";
-            string upperCase = name1.ToCharArray();
+            string upperCase = name1;
             name1 = name2;
             name2 = "Kamran";
             Console.WriteLine(upperCase);
