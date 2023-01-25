@@ -25,31 +25,31 @@ namespace Task1
             #region Sorular
             string age, work, lastBook, color,car, sleepTime, watchingTV;
 
-            Console.Write(name + " " + gender.ToLower() + " neçə yaşınız var?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " neçə yaşınız var?");
             age = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " hansı sahədə işləyirsiniz?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " hansı sahədə işləyirsiniz?");
             work = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " ən son nə zaman kitab oxumusunuz?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " ən son nə zaman kitab oxumusunuz?");
             lastBook = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " ən sevdiyiniz rəng hansıdır?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " ən sevdiyiniz rəng hansıdır?");
             color = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " avtomobil idarə edə bilirsiniz?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " avtomobil idarə edə bilirsiniz?");
             car = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " gündə neçə saat yatırsınız?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " gündə neçə saat yatırsınız?");
             sleepTime = Console.ReadLine();
 
-            Console.Write(name + " " + gender.ToLower() + " TV kanallarını izləyirsiniz?");
+            Console.Write(name + " " + gender.ToLower().Trim() + " TV kanallarını izləyirsiniz?");
             watchingTV = Console.ReadLine();
             Console.Clear();
             #endregion
 
             #region Cevaplar
-            Console.WriteLine("Ad: " + name + " " + gender.ToLower());
+            Console.WriteLine("Ad: " + name + " " + gender.ToLower().Trim());
             Console.WriteLine("Yaş: " + age);
             Console.WriteLine("İş: " + work);
             Console.WriteLine("Kitab: " + lastBook);
