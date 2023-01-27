@@ -62,15 +62,12 @@ namespace Homework2
             #region Helper
 
             char gender1 = Convert.ToChar(gender);
-
             DateTime birthday1;
             birthday1 = Convert.ToDateTime(birthday);
-
             double height1 = Convert.ToDouble(height); // float versem problem olar ?
-
             double weight1 = Convert.ToDouble(weight);
+            decimal salary1 = Convert.ToDecimal(salary);
 
-            double salary1 = Convert.ToDouble(salary);
             #endregion
             #region Output
 
