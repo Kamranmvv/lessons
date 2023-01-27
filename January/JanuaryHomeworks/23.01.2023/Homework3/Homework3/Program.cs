@@ -18,6 +18,8 @@ namespace Homework3
 
             
             */
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
             string ageS, salaryS, heightS, weightS, friendS;
             Console.Write("Neçə yaşınız var? : ");
             ageS = Console.ReadLine();
