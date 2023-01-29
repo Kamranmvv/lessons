@@ -25,6 +25,9 @@ namespace Homeworks
 
             Console.WriteLine(a);
             Console.WriteLine(b);
+
+
+            Console.ReadLine();
         }
     }
 }

@@ -35,6 +35,7 @@ namespace Homework4
 
 
 
+            Console.ReadLine();
 
 
         }
