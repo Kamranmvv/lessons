@@ -17,8 +17,10 @@ namespace Homeworks
             Yox əgər səhv məlumat daxil etsə, yenidən username və password'u daxil etməsini istəyin. 3 dəfə səhv daxil etdikdən sonra "Hesab bloklandi" yazsın
             */
             Console.WriteLine("Login System");
+
             const string username = "Kamran";
             const string password = "Kamran2002";
+
             Console.Write("Username daxil edin: ");
             string usernameEntered = Console.ReadLine();
             Console.Write("Password daxil edin: ");
