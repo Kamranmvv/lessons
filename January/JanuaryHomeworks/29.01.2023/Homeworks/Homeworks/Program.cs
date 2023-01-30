@@ -29,7 +29,7 @@ namespace Homeworks
                 Console.WriteLine("Sisteme daxil olundu.");
             }
             else
-            {
+            {   
                 Console.Write("Username daxil edin: ");
                 usernameEntered = Console.ReadLine();
                 Console.Write("Password daxil edin: ");
@@ -45,16 +45,17 @@ namespace Homeworks
                     usernameEntered = Console.ReadLine();
                     Console.Write("Password daxil edin: ");
                     passwordEntered = Console.ReadLine();
+                    if (username == usernameEntered && password == passwordEntered)
+                    {
+                        Console.WriteLine("Sisteme daxil olundu.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hesabiniz blok olundu");
+                    }
                 }
                 }
-                if (username == usernameEntered && password == passwordEntered)
-                {
-                    Console.WriteLine("Sisteme daxil olundu.");
-                }
-                else
-                {
-                Console.WriteLine("Hesabiniz blok olundu");
-                }
+               
 
             Console.ReadLine();
 
