@@ -92,8 +92,7 @@ namespace Homework5
                 elements.Add("Strings");
                 elements.Add("Boolens");
                 elements.Add("Loops");
-
-
+                
                 Console.Clear();
                 switch (operationValue)
                 {

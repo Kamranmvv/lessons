@@ -17,13 +17,21 @@ namespace Homework3
             int[] numberArr = new int[100];
             Random randomNumbers = new Random();
             int total = 0;
+            int x = 0;
+            int y = 0;
             for (int i = 0; i < numberArr.Length; i++)
             {
-                numberArr[i] = randomNumbers.Next(1,9);
+                numberArr[i] = randomNumbers.Next(1,10000);
+                
+                
 
                 total = total + numberArr[i];
             }
+            x= numberArr.Max();
+            y= numberArr.Min();
             Console.WriteLine(total);
+            Console.WriteLine(x);
+            Console.WriteLine(y);
 
             Console.ReadLine();
         }
