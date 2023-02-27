@@ -10,7 +10,7 @@ namespace Homeworks
     {
         private string _name;
         private string _surname;
-        public string _email;
+        private string _email;
 
 
         public string Name

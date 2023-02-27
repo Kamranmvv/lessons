@@ -30,7 +30,7 @@ namespace Homeworks
             student.Surname = "Mammadov";
             
 
-            Console.WriteLine(student._email);
+
             Console.ReadLine();
         }
     }
