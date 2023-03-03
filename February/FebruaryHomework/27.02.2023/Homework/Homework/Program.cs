@@ -17,6 +17,16 @@ Employee: Id, ReferanceNumber, DocumentNumber, Name, Surname, Gender, DateOfStar
 Teacher: Id, ReferanceNumber, DocumentNumber, Name, Surname, Gender, DateOfStartWorking, DateOfEndWorking, RestDays, Branch, Level, RegUser, RegDate, EditUser, EditDate, Deleted
 Student: Id, ReferanceNumber, DocumentNumber, Name, Surname, Gender, Department, Level, RegUser, RegDate, EditUser, EditDate, Deleted
              */
+
+            Teacher teacher = new Teacher();
+            teacher.Deleted = true;
+
+
+            Console.WriteLine(teacher.Deleted);
+
+
+
+
         }
     }
 }
