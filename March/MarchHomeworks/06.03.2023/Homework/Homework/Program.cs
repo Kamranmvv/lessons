@@ -25,7 +25,7 @@ namespace Homework
 
             person.ShowInfo();
             Student student = new Student();
-            student.TeacherName = "Sevil";
+            student.TeacherName = "Hümbət";
             student.ClassName = "1319i";
             student.ShowInfo();
             Console.ReadLine();
