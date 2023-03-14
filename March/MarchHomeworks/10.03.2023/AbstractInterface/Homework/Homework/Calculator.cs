@@ -18,7 +18,16 @@ namespace Homework
 
         public override void Division(double num1, double num2)
         {
-            _result = num1 / num2;
+            if (num2 == 0)
+            {
+                Console.WriteLine("Divide Zero Error!!!");
+                
+            }
+            else
+            {
+                _result = num1 / num2;
+            }
+
         }
 
         public override void Multiplication(double num1, double num2)
