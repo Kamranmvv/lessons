@@ -9,7 +9,7 @@ namespace Homework1
     public class Address
     {
 
-        public virtual int Id { get; set; }
+        public int Id { get; set; }
         public int No { get; set; }
         public string Building { get; set; }
         public string Street { get; set; }

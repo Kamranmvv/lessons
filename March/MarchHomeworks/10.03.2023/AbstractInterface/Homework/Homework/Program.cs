@@ -18,6 +18,9 @@ namespace Homework
                kiçik app'lar yazanda bunları praktika edəndə daha rahat başa düşəcəksiz çünkü hal-hazırda bunları
                real tədbiq etməyə çalışsaz hələ bilmədiyiniz nə qədər mövzu əksiyi var.
             */
+            //var a = "5 * 3 + 9 / 4";
+            //var b = "5 + 3 / 2";
+            //var c = "(5 + 3 / 2) * 10";
             Begin:
             Menu menu = new Menu();
             Calculator calculator = new Calculator();
