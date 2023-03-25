@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework2
 {
-    public class Generic<Student, Customer, Teacher ,Book> : IGenericRepository
+    public class GenericRepository<T> : IGenericRepository where T : class
     {
         public void Add()
         {

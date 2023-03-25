@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework2
 {
-    interface IGenericRepository
+    public interface IGenericRepository
     {
         void Add();
         void Update();

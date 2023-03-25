@@ -10,7 +10,9 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-            Generic<Student, Customer, Teacher, Book> gen = new Generic<Student, Customer, Teacher, Book>();
+            GenericRepository<Book> g = new GenericRepository<Book>();
+
+            
             
         }
     }

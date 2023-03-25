@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework2
 {
-    class Customer
+    public class Customer
     {
     }
 }
