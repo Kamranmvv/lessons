@@ -16,5 +16,16 @@ namespace Homework1
         {
             InitializeComponent();
         }
+
+        private void LoginMethod(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            if (username == "Kamran" && password == "1")
+            {
+                UserPanel userPanel = new UserPanel();
+                userPanel.Show();
+            }
+        }
     }
 }
