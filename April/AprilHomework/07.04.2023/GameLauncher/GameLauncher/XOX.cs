@@ -26,7 +26,7 @@ namespace GameLauncher
 
             if (input=="X")
             {
-                btn.BackColor = Color.Green;
+                btn.BackColor = Color.LimeGreen;
                 input = "O";
             }
             else if (input == "O")
