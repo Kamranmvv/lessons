@@ -29,5 +29,12 @@ namespace GameLauncher
             xox.Show();
             this.Hide();
         }
+
+        private void picBoxStartMemoryGame_Click(object sender, EventArgs e)
+        {
+            MemoryGame memoryGame = new MemoryGame();
+            memoryGame.Show();
+            this.Hide();
+        }
     }
 }

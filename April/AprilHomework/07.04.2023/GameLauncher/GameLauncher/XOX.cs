@@ -71,6 +71,12 @@ namespace GameLauncher
 
         private void Clear()
         {
+            foreach (Button item in Controls)
+            {
+                item.Text = "";
+                item.Enabled = true;
+                item.BackColor = Color.Aqua;
+            }
             button1.Text = "";
             button2.Text = "";
             button3.Text = "";
@@ -112,6 +118,9 @@ namespace GameLauncher
             Application.Exit();
         }
 
-        
+        private void XOX_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
