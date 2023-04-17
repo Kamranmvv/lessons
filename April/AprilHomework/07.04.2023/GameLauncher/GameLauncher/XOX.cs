@@ -115,7 +115,7 @@ namespace GameLauncher
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
         }
 
         private void XOX_Load(object sender, EventArgs e)
