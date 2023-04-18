@@ -23,6 +23,12 @@ namespace GameLauncher
         Button secondClickBtn;
         int firstIndex;
         int clickCount;
+        int allClickCount;
+
+
+        DateTime startTime;
+        
+
         public MemoryGame()
         {
             InitializeComponent();
@@ -31,7 +37,17 @@ namespace GameLauncher
         private void MemoryGame_Load(object sender, EventArgs e)
         {
             ChangeImagePlace();
+
+            startTime = DateTime.Now;
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Start();
+            if (allClickCount == 10)
+            {
+                timer1.Stop();
+            }
         }
+
         private void ChangeImagePlace()
         {
             Random random = new Random();
@@ -47,6 +63,7 @@ namespace GameLauncher
         }
         private void buttonClick(object sender, EventArgs e)
         {
+            
             clickCount++;
 
             
@@ -67,14 +84,20 @@ namespace GameLauncher
             {
                 firstClickBtn = btn;
                 firstIndex = indexNumber;
+
             }
             else if (firstIndex == indexNumber)
             {
+                allClickCount++;
                 firstClickBtn.Enabled = false;
                 btn.Enabled = false;
                 clickCount = 0;
                 firstClickBtn = null;
 
+                if (allClickCount == 10)
+                {
+                    
+                }
             }
             secondClickBtn = btn;
 
@@ -82,11 +105,17 @@ namespace GameLauncher
 
         }
 
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
-        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            TimeSpan elapsedTime = DateTime.Now - startTime;
+            label1.Text = "Timer: " + elapsedTime.ToString(@"hh\:mm\:ss");
+        }
     }
 }
