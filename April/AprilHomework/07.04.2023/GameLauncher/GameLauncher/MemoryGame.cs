@@ -25,6 +25,8 @@ namespace GameLauncher
         int clickCount;
         int allClickCount;
 
+        TimeSpan elapsedTime;
+        TimeSpan recordTime = TimeSpan.MaxValue;
 
         DateTime startTime;
         
@@ -42,10 +44,7 @@ namespace GameLauncher
             timer1.Interval = 1000;
             timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Start();
-            if (allClickCount == 10)
-            {
-                timer1.Stop();
-            }
+            
         }
 
         private void ChangeImagePlace()
@@ -74,6 +73,8 @@ namespace GameLauncher
             btn.Refresh();
             if (clickCount == 3)
             {
+                firstClickBtn.Enabled = true;
+                secondClickBtn.Enabled = true;
                 firstClickBtn.BackgroundImage = null;
                 secondClickBtn.BackgroundImage = null;
                 firstClickBtn = null;
@@ -84,38 +85,87 @@ namespace GameLauncher
             {
                 firstClickBtn = btn;
                 firstIndex = indexNumber;
+                firstClickBtn.Enabled = false;
 
             }
             else if (firstIndex == indexNumber)
             {
-                allClickCount++;
+               
                 firstClickBtn.Enabled = false;
                 btn.Enabled = false;
                 clickCount = 0;
                 firstClickBtn = null;
 
-                if (allClickCount == 10)
-                {
-                    
-                }
+                allClickCount++;
+
             }
             secondClickBtn = btn;
+            secondClickBtn.Enabled = false;
 
 
 
-        }
-
-        
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            TimeSpan elapsedTime = DateTime.Now - startTime;
+            Begin:
+            elapsedTime = DateTime.Now - startTime;
             label1.Text = "Timer: " + elapsedTime.ToString(@"hh\:mm\:ss");
+            if (allClickCount == 10)
+            {
+                
+                timer1.Stop();
+                if (recordTime > elapsedTime)
+                {
+                    MessageBox.Show("Yeni Rekord!!!" +elapsedTime.ToString(@"hh\:mm\:ss"), "Memory Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblRecord.Text ="Rekord: " + elapsedTime.ToString(@"hh\:mm\:ss");
+                    recordTime = elapsedTime;
+                    RestartGame();
+                    goto Begin;
+                }
+                else
+                {
+                    MessageBox.Show("Oyun Bitdi!", "Memory Game", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    RestartGame();
+                    goto Begin;
+                }
+               
+
+            }
+        }
+        private void RestartGame()
+        {
+            foreach (Control item in Controls)
+            {
+                if (item is Button)
+                {
+                    item.BackgroundImage = null;
+                    item.Enabled = true;
+                    
+                }
+                
+                    
+                
+            }
+            firstClickBtn = null;
+            secondClickBtn = null;
+            firstIndex =0;
+            clickCount = 0;
+            allClickCount = 0;
+
+
+            startTime = DateTime.Now;
+            timer1.Start();
+            ChangeImagePlace();
+
+        }
+
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
