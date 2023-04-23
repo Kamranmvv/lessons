@@ -45,7 +45,7 @@ namespace PersonGenerator
                 VirtualDatabase.Persons.Add(person);
 
                 CreateNewFolderIfNotExists(Path.Combine("C:/Countries/",country));
-                string path = "C:/Countries/"+country;
+                string path = Path.Combine("C:/Countries/",country);
                 if (age>0 &&age<=18)
                 {
                     string ageS = "0-18";
