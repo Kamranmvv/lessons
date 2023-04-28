@@ -60,7 +60,7 @@ namespace Homework3
         }
         static bool IsBetween(int number)
         {
-            if (number >= 400 && number <= 550)
+            if (number > 400 && number <= 550)
             {
                 return true;
             }

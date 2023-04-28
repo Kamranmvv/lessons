@@ -16,6 +16,8 @@ namespace Homework1
             myDelegate();
             myDelegate = Delete;
             myDelegate();
+
+            
         }
         delegate void RunAnyMethod();
         public static void Add()

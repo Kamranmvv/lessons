@@ -152,7 +152,7 @@ namespace Homework2
             m.Color != ColorEnum.Red &&
             m.Color != ColorEnum.Black &&
             m.EngineSize >= 2000 &&
-            m.EngineSize <= 5000 &&
+            m.EngineSize <= 4000 &&
             m.TransmissionType != TransmissionTypeEnum.Robot &&
             m.Year >= 2010)
             .ToList();
