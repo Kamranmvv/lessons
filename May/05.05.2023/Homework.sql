@@ -62,8 +62,8 @@ create table Personals (
 		Surname nvarchar(50) not null,
 		Email nvarchar(250) not null unique,
 		Gender char(1),
-		CreatedDate datetime default getdate(),
-		UpdatedDate datetime,
+		CreatedDate datetime not null default getdate(),
+		UpdatedDate datetime null,
 		IsDeleted bit default 0
 		)
 
