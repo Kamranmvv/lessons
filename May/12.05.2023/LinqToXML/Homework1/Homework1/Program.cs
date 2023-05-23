@@ -24,10 +24,10 @@ namespace Homework1
             string filePath2 = Path.Combine(folderPath, "Stuffs.xml");
             string filePath3 = Path.Combine(folderPath, "Teachers.xml");
 
-            //Directory.CreateDirectory(folderPath);
-            //File.Create(filePath1).Close();
-            //File.Create(filePath2).Close();
-            //File.Create(filePath3).Close();
+            Directory.CreateDirectory(folderPath);
+            File.Create(filePath1).Close();
+            File.Create(filePath2).Close();
+            File.Create(filePath3).Close();
 
             #endregion
 
@@ -96,7 +96,7 @@ namespace Homework1
                              )
                           )
                        );
-            docTeachers.Save(filePath2);
+            docTeachers.Save(filePath3);
             #endregion
 
             #region Stuff
@@ -131,8 +131,74 @@ namespace Homework1
                              )
                           )
                        );
-            docStuffs.Save(filePath3);
+            docStuffs.Save(filePath2);
             #endregion
+
+
+            /*Homework 2:
+             1-ci ev tapşırığını edəndən sonra Students.xml, Teachers.xml və Stuffs.xml içindəki məlumatları List<Student>, List<Teacher>
+             və List<Stuff> içərisinə çəkməlisiniz.
+*/
+
+            XDocument readStudentsXML = XDocument.Load(filePath1);
+            List<XElement> studentElements = readStudentsXML.Descendants("Student").ToList();
+
+            List<Student> readStudents = new List<Student>();
+
+            foreach (XElement item in studentElements)
+            {
+                Student student = new Student();
+                student.Id = Guid.Parse(item.Element("Id").Value);
+                student.Name = item.Element("Name").Value;
+                student.Surname = item.Element("Surname").Value;
+                student.PhoneNumber = item.Element("PhoneNumber").Value;
+                student.EmailAddress = item.Element("EmailAddress").Value;
+
+                readStudents.Add(student);
+            }
+
+            XDocument readTeachersXML = XDocument.Load(filePath3);
+            List<XElement> teacherElements = readTeachersXML.Descendants("Teacher").ToList();
+
+            List<Teacher> readTeachers = new List<Teacher>();
+
+            foreach (XElement item in studentElements)
+            {
+                Teacher teacher = new Teacher();
+                teacher.Id = Guid.Parse(item.Element("Id").Value);
+                teacher.Name = item.Element("Name").Value;
+                teacher.Surname = item.Element("Surname").Value;
+                teacher.PhoneNumber = item.Element("PhoneNumber").Value;
+                teacher.EmailAddress = item.Element("EmailAddress").Value;
+                XElement dateRegistrationElement = item.Element("DateRegistration");
+                if (dateRegistrationElement != null && !string.IsNullOrEmpty(dateRegistrationElement.Value))
+                {
+                    teacher.DateRegistration = DateTime.Parse(dateRegistrationElement.Value);
+                }
+                else
+                {
+                    teacher.DateRegistration = DateTime.MinValue;
+                }
+                readTeachers.Add(teacher);
+            }
+
+
+            XDocument readStuffsXML = XDocument.Load(filePath2);
+            List<XElement> stuffElements = readStuffsXML.Descendants("Stuff").ToList();
+
+            List<Stuff> readStuffs = new List<Stuff>();
+
+            foreach (XElement item in studentElements)
+            {
+                Stuff stuff = new Stuff();
+                stuff.Id = Guid.Parse(item.Element("Id").Value);
+                stuff.Name = item.Element("Name").Value;
+                stuff.Surname = item.Element("Surname").Value;
+                stuff.PhoneNumber = item.Element("PhoneNumber").Value;
+                stuff.EmailAddress = item.Element("EmailAddress").Value;
+                //stuff.Country = item.Element("Country").Value;
+                readStuffs.Add(stuff);
+            }
         }
     }
 
