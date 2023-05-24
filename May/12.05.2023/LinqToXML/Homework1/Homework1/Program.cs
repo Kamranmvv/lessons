@@ -24,10 +24,10 @@ namespace Homework1
             string filePath2 = Path.Combine(folderPath, "Stuffs.xml");
             string filePath3 = Path.Combine(folderPath, "Teachers.xml");
 
-            Directory.CreateDirectory(folderPath);
-            File.Create(filePath1).Close();
-            File.Create(filePath2).Close();
-            File.Create(filePath3).Close();
+            //Directory.CreateDirectory(folderPath);
+            //File.Create(filePath1).Close();
+            //File.Create(filePath2).Close();
+            //File.Create(filePath3).Close();
 
             #endregion
 
@@ -162,7 +162,7 @@ namespace Homework1
 
             List<Teacher> readTeachers = new List<Teacher>();
 
-            foreach (XElement item in studentElements)
+            foreach (XElement item in teacherElements)
             {
                 Teacher teacher = new Teacher();
                 teacher.Id = Guid.Parse(item.Element("Id").Value);
@@ -188,7 +188,7 @@ namespace Homework1
 
             List<Stuff> readStuffs = new List<Stuff>();
 
-            foreach (XElement item in studentElements)
+            foreach (XElement item in stuffElements)
             {
                 Stuff stuff = new Stuff();
                 stuff.Id = Guid.Parse(item.Element("Id").Value);
@@ -196,7 +196,7 @@ namespace Homework1
                 stuff.Surname = item.Element("Surname").Value;
                 stuff.PhoneNumber = item.Element("PhoneNumber").Value;
                 stuff.EmailAddress = item.Element("EmailAddress").Value;
-                //stuff.Country = item.Element("Country").Value;
+                stuff.Country = item.Element("Country").Value;
                 readStuffs.Add(stuff);
             }
         }
