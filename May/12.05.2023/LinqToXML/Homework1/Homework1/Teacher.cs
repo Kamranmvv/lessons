@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework1
+namespace X
 {
     public class Teacher
     {
@@ -15,5 +15,9 @@ namespace Homework1
         public string EmailAddress { get; set; }
 
         public DateTime DateRegistration { get; set; }
+
+        int a;
+
+        
     }
 }
