@@ -24,11 +24,15 @@ namespace Homework
             }
             set
             {
-                _username = value;
                 
                 if (CheckDublicateUsername()==true)
                 {
                     Console.WriteLine("Elave etmek istediyiniz username artiq sistemde movcuddur!");
+                }
+                else
+                {
+                    _username = value;
+
                 }
             }
         }
@@ -73,8 +77,9 @@ namespace Homework
         {
             foreach (string item in List)
             {
-                if (List.IndexOf(item) != List.LastIndexOf(item))
+                if (List.IndexOf(item) == List.LastIndexOf(item))
                 {
+                    var x = List.IndexOf(item);
                     return true;      
                 }
             }
