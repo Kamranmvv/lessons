@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace EduSys.Core.Services
 {
-    public interface IProductService : IService<Product>
+    public interface ICategoryService : IService<Category>
     {
-        Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory();
+        public Task<CustomResponseDto<CategoryWithProdyctsDto>> GetSingleCategoryByIdWithProductsAsync(int categoryId);
     }
 }
