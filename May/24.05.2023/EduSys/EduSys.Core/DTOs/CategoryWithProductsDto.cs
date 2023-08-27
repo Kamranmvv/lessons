@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EduSys.Core.DTOs
 {
-    public class CategoryWithProdyctsDto : CategoryDto
+    public class CategoryWithProductsDto : CategoryDto
     {
         public List<ProductDto> Products { get; set; }
     }

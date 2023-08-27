@@ -23,13 +23,13 @@ namespace EduSys.Service.Services
             _mapper = mapper;
             _categoryRepository = categoryRepository;
         }
-        public async Task<CustomResponseDto<CategoryWithProdyctsDto>> GetSingleCategoryByIdWithProductsAsync(int categoryId)
+        public async Task<CustomResponseDto<CategoryWithProductsDto>> GetSingleCategoryByIdWithProductsAsync(int categoryId)
         {
             var category = await _categoryRepository.GetSingleCategoryByIdWithProductsAsync(categoryId);
 
-            var categoryDto = _mapper.Map<CategoryWithProdyctsDto>(category);
+            var categoryDto = _mapper.Map<CategoryWithProductsDto>(category);
 
-            return CustomResponseDto<CategoryWithProdyctsDto>.Success(200, categoryDto);
+            return CustomResponseDto<CategoryWithProductsDto>.Success(200, categoryDto);
         }
     }
 }
